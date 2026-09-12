@@ -1,0 +1,24 @@
+{
+  "features": [
+    "bureau_score",
+    "credit_utilization",
+    "debt_to_income",
+    "years_employed",
+    "credit_history_yrs",
+    "num_credit_inquiries_6m",
+    "max_dpd",
+    "months_delinquent"
+  ],
+  "weights": [
+    -0.00556820403923916,
+    2.746505104171754,
+    1.4037234644183443,
+    -0.051693867519108386,
+    -0.0025797661582479267,
+    0.030691186608634076,
+    0.0,
+    0.0
+  ],
+  "intercept": 1.9370330360893218,
+  "note": "logit = intercept + sum(weights[i] * raw_feature[i]); probability = 1 / (1 + exp(-logit)); score = 300 + (1 - probability) * 600  [scaled to 300-900 like a bureau score]"
+}
